@@ -10,8 +10,8 @@
            many amaze
 
 >>>>>>>LANGUAGE DESCRIPTION<<<<<<<
-This wonderful programming language's name shall be PLWOACA (Programming Language Without a Catchy Acronym).
-The syntax of the programming language is as follows:
+This language is called APLACA (A Programming Language Almost Called Alpaca).
+The syntax of APLACA is as follows:
 
 ---OPERATORS---
 Whitespace is mandatory.
@@ -74,7 +74,7 @@ fi{
 	sakufgakjfhaskd
 }
 
-The language contains no iterative statements; recursion is used instead.
+APLACA contains no iterative statements; recursion is used instead.
 
 ---FUNCTIONS---
 ret_type func_name (param1 param2...) {
