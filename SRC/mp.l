@@ -9,7 +9,14 @@ void yyerror(char *);
 				yylval = atoi(yytext);
 				return INTEGER;
 			}
-[-+*/%()\n]		return *yytext;
+[*][*]				return EXP_OPER;
+=_=					return EQUAL;
+=_\<					return LESS_OR_EQUAL;
+\<_\<					return LESS;
+\>_=					return GREATER_OR_EQUAL;
+\>_\>					return GREATER;
+\>_\<					return UNEQUAL;
+[-+*/%()|&^\n]		return *yytext;
 [ \t]		;
 .			yyerror("invalid character");
 %%
