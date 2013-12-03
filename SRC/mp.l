@@ -1,31 +1,21 @@
- %{
+%{
+#include <stdlib.h>
+void yyerror(char *);
+#include "y.tab.h"
+%}
 
-  #include <stdlib.h>
-  #include "y.tab.h"
+%%
+[0-9]+ 		{
+				yylval = atoi(yytext);
+				return INTEGER;
+			}
+[-+*/%()\n]		return *yytext;
+[ \t]		;
+.			yyerror("invalid character");
+%%
 
-  %}
+int yywrap(void) {
+	return 1;
+}
 
-  %%
 
-  ("hi"|"oi")"\n"       { return HI;  }
-  ("tchau"|"bye")"\n"   { return BYE; }
-  .                     { yyerror();  }
-
-  %%
-
-  int yyerror(void)
-  {
-      printf("Error\n");
-      exit(1);
-  }
-  
-  int yywrap(void)
-  {
-     return 0;
-  }
-
-  int main(void)
-  {
-     yyparse();
-     return 0;
-  }

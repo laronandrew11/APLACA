@@ -1,14 +1,30 @@
-%token HI BYE
+%{
+#include <stdio.h>
+int yylex(void);
+void yyerror(char *);
+%}
+
+%token INTEGER
 
 %%
+program:
+	program expr '\n'	{printf("%d\n", $2); }
+	|
+	;
 
-program: 
-         hi bye
-        ;
+expr:
+	INTEGER			{ $$ = $1; }
+	| expr '+' expr 	{ $$ = $1; }
+	| expr '-' expr		{ $$ = $2 + $3; }
+	|
+	;
+%%
 
-hi:     
-        HI     { printf("Hello World\n");   }
-        ;
-bye:    
-        BYE    { printf("Bye World\n"); exit(0); }
-         ;
+void yyerror(char *s) {
+	fprintf(stderr, "%s\n", s);
+}
+
+int main() {
+	yyparse();
+	return 0;
+}
