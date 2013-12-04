@@ -40,24 +40,36 @@
       know about them.  */
    enum yytokentype {
      INTEGER = 258,
-     EXP_OPER = 259,
-     EQUAL = 260,
-     LESS_OR_EQUAL = 261,
-     GREATER_OR_EQUAL = 262,
-     LESS = 263,
-     GREATER = 264,
-     UNEQUAL = 265
+     CHAR = 259,
+     STRING = 260,
+     EXP_OPER = 261,
+     EQUAL = 262,
+     LESS_OR_EQUAL = 263,
+     GREATER_OR_EQUAL = 264,
+     LESS = 265,
+     GREATER = 266,
+     UNEQUAL = 267,
+     AND = 268,
+     OR = 269,
+     IF = 270,
+     ELSE = 271
    };
 #endif
 /* Tokens.  */
 #define INTEGER 258
-#define EXP_OPER 259
-#define EQUAL 260
-#define LESS_OR_EQUAL 261
-#define GREATER_OR_EQUAL 262
-#define LESS 263
-#define GREATER 264
-#define UNEQUAL 265
+#define CHAR 259
+#define STRING 260
+#define EXP_OPER 261
+#define EQUAL 262
+#define LESS_OR_EQUAL 263
+#define GREATER_OR_EQUAL 264
+#define LESS 265
+#define GREATER 266
+#define UNEQUAL 267
+#define AND 268
+#define OR 269
+#define IF 270
+#define ELSE 271
 
 
 

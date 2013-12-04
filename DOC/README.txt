@@ -1,7 +1,10 @@
-====CSC617M INTERPRETER README FILE===
+=======================================
+====CSC617M INTERPRETER README FILE====
+=======================================
 >>>>>>>PROJECT INFORMATION<<<<<<<
 
-	   wow
+	   wow					
+				regluar expersion
 	  	such project
 					wow
     very description
@@ -14,7 +17,7 @@ This language is called APLACA (A Programming Language Almost Called Alpaca).
 The syntax of APLACA is as follows:
 
 ---OPERATORS---
-Whitespace is mandatory.
+Whitespace is mandatory //not yet, though
 
 Arithmetic:
 Addition: + x y
@@ -39,9 +42,10 @@ Relational:
 Logic:
 &_& x y
 |_| x y
-
 !x
 
+
+/*EVERYTHING BELOW THIS POINT IS NOT FULLY IMPLEMENTED*/
 Assignment:
 var <- (exp)
 example:
@@ -64,7 +68,7 @@ string (char[])
 
 ---CONDITIONALS AND RECURSION---
 
-if (herpderp =_= harpdarp){
+if (=_= herpderp harpdarp){
 	asdfkjasldfkj
 }
 fiif (hurrdurr){
@@ -85,3 +89,20 @@ ret_type func_name (param1 param2...) {
 ---INPUT/OUTPUT---
 x <- (# in "hi")
 out <- (+ x 5)
+
+>>>>>>>RESOURCES AND TOOLS USED<<<<<<<
+The APLACA interpreter makes use of Flex and Bison.
+
+>>>>>>>TARGET PLATFORM<<<<<<<
+APLACA interprets to C code, so it should be capable of running on any system which can run a C compiler such as GCC.
+
+>>>>>>>KNOWN PROBLEMS<<<<<<<
+Bugs:
+-cockroach
+-beetle
+-grasshopper
+-mosquito
+-wasp
+
+>>>>>>>MISCELLANEOUS INFORMATION<<<<<<<
+This text file was created using state-of-the-art Notepad technology.
