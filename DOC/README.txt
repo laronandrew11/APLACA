@@ -40,9 +40,9 @@ Relational:
 >_< x y - not equal to
 
 Logic:
-&_& x y
-|_| x y
-!x
+&_& x y - and
+|_| x y - or
+!x - not
 
 
 /*EVERYTHING BELOW THIS POINT IS NOT FULLY IMPLEMENTED*/
@@ -92,6 +92,11 @@ out <- (+ x 5)
 
 >>>>>>>RESOURCES AND TOOLS USED<<<<<<<
 The APLACA interpreter makes use of Flex and Bison.
+
+The following resources were referred to in the making of this project:
+
+	Niemann, T. Lex and Yacc Tutorial. Retrieved from http://epaperpress.com/lexandyacc/
+
 
 >>>>>>>TARGET PLATFORM<<<<<<<
 APLACA interprets to C code, so it should be capable of running on any system which can run a C compiler such as GCC.
