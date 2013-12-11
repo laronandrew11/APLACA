@@ -78,11 +78,13 @@ fi{
 	sakufgakjfhaskd
 }
 
+
 APLACA contains no iterative statements; recursion is used instead.
 
 ---FUNCTIONS---
-ret_type func_name (param1 param2...) {
-
+func func_name (param1 param2...) {
+statement;
+return var;
 }
 
 
