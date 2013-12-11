@@ -57,9 +57,9 @@ String concatenation:
 ---DATA TYPES AND VARIABLES---
 bool
 int
-long
+//long
 float
-double
+//double
 char
 string (char[])
 
@@ -69,10 +69,10 @@ string (char[])
 ---CONDITIONALS AND RECURSION---
 
 if (=_= herpderp harpdarp){
-	asdfkjasldfkj
+	:> asdfkjasldfkj
 }
 fiif (hurrdurr){
-	asdfkalsfk
+	 asdfkalsfk
 }
 fi{
 	sakufgakjfhaskd
@@ -83,8 +83,8 @@ APLACA contains no iterative statements; recursion is used instead.
 
 ---FUNCTIONS---
 func func_name (param1 param2...) {
-statement;
-return var;
+:> statement
+return var
 }
 
 
@@ -98,6 +98,8 @@ The APLACA interpreter makes use of Flex and Bison.
 The following resources were referred to in the making of this project:
 
 	Niemann, T. Lex and Yacc Tutorial. Retrieved from http://epaperpress.com/lexandyacc/
+
+	Kiers, B. Creating your own programming language with ANTLR. Retrieved from http://bkiers.blogspot.com/2011/03/creating-your-own-programming-language.html.
 
 
 >>>>>>>TARGET PLATFORM<<<<<<<

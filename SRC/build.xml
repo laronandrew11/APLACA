@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<project name="APLACA" default="run">  
+  
+  <path id="classpath">  
+    <pathelement location="build/classes/" />  
+    <pathelement location="src/main/" />  
+    <fileset dir="lib">  
+      <include name="antlr-runtime-3.2.jar" /> 
+		<include name="antlrworks-1.5.jar"/>
+    </fileset>  
+  </path>  
+  
+  <!--target name="clean">  
+    <delete dir="build/classes/" />  
+    <mkdir dir="build/classes/" />  
+  </target-->  
+  
+  <target name="compile" >  
+    <javac srcdir="src/main/" destdir="build/classes/" includeantruntime="false">  
+      <classpath refid="classpath" />  
+    </javac>  
+  </target>  
+  
+  <target name="generate" >  
+    <echo>Generating the lexer and parser...</echo>  
+    <java classname="org.antlr.Tool" fork="true" failonerror="true">  
+      <arg value="-fo" />  
+      <arg value="src/main/aplaca/parser/" />  
+      <arg value="src/grammar/APLACA.g" />  
+      <classpath refid="classpath" />  
+    </java>  
+    <antcall target="compile" />  
+  </target>  
+  
+  <target name="run" depends="generate">  
+    <echo>Running the main class...</echo>  
+    <java classname="aplaca.Main">  
+      <classpath refid="classpath" />  
+    </java>  
+  </target>  
+  
+</project>  

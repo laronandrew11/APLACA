@@ -52,7 +52,8 @@
      AND = 268,
      OR = 269,
      IF = 270,
-     ELSE = 271
+     ELSE = 271,
+     GETS = 272
    };
 #endif
 /* Tokens.  */
@@ -70,6 +71,7 @@
 #define OR 269
 #define IF 270
 #define ELSE 271
+#define GETS 272
 
 
 
