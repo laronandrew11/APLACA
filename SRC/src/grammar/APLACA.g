@@ -33,14 +33,71 @@ idList
   ;  
  
 assignment  
-  :  Identifier indexes? '=' expression  
+  :  Identifier indexes? '<-' expression  
   ;  
   
 indexes  
   :  ('[' expression ']')+  
   ;   
   
+expression  
+  :  condExpr  
+  ;  
   
+condExpr  
+  :  orExpr ( '?' expression ':' expression  
+            | In expression  
+            )?  
+  ;  
+  
+orExpr  
+  :  andExpr ('||' andExpr)*  
+  ;  
+  
+andExpr  
+  :  equExpr ('&&' equExpr)*  
+  ;  
+  
+equExpr  
+  :  relExpr (('==' | '!=') relExpr)*  
+  ;  
+  
+relExpr  
+  :  addExpr (('>=' | '<=' | '>' | '<') addExpr)*  
+  ;  
+  
+addExpr  
+  :  mulExpr (('+' | '-') mulExpr)*  
+  ;  
+  
+mulExpr  
+  :  powExpr (('*' | '/' | '%') powExpr)*  
+  ;  
+  
+powExpr  
+  :  unaryExpr ('^' unaryExpr)*  
+  ;  
+    
+unaryExpr  
+  :  '-' atom  
+  |  '!' atom  
+  |  atom  
+  ;  
+  
+atom  
+  :  Null  
+  |  Number  
+  |  Bool  
+  |  lookup  
+  ;  
+
+functionCall  
+  :  Identifier '(' exprList? ')'  
+  |  Println '(' expression? ')'  
+  |  Print '(' expression ')'  
+  |  Assert '(' expression ')'  
+  |  Size '(' expression ')'  
+  ;   
 
 IF	:	'if';
 ELSE	:	'fi';
